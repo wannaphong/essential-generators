@@ -1,6 +1,7 @@
 import os
 import random
 from essential_generators import Random36
+from pythainlp import word_tokenize
 
 
 class MarkovWordGenerator():
@@ -100,7 +101,7 @@ class MarkovWordGenerator():
         n = 3
         self.grams = {}
         gram_buffer = []
-
+        text = ' '.join(word_tokenize(text))
         for letter in text:
             # letter = letter.lower()
 
